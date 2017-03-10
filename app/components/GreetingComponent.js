@@ -4,7 +4,6 @@ const GreetingComponent = (props) => {
 
 	return (
 	<div>
-	{console.log('greeting')}
 		<div className="headline-container">
 			<h1 className="headline">Need Some Inspiration?</h1>
 			<div className="single-btn-container">
