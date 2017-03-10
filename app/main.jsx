@@ -7,6 +7,7 @@ import {Provider} from 'react-redux'
 import AppContainer from './components/AppContainer'
 import GreetingComponent from './components/GreetingComponent'
 import TimeComponent from './components/TimeComponent'
+import PromptComponent from './components/PromptComponent'
 
 import store from './store'
 
@@ -16,7 +17,8 @@ render(
     <Route path="/" component={AppContainer}>
 	    <IndexRedirect to="/greeting" />
 	    <Route path="/greeting" component={GreetingComponent} />
-	    <Route path="/time" component={TimeComponent} />
+      <Route path="/time" component={TimeComponent} />
+	    <Route path="/prompts" component={PromptComponent} />
     </Route>
     </Router>
   </Provider>,
