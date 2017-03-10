@@ -8,6 +8,7 @@ import AppContainer from './components/AppContainer'
 import GreetingComponent from './components/GreetingComponent'
 import TimeComponent from './components/TimeComponent'
 import PromptComponent from './components/PromptComponent'
+import InspoComponent from './components/InspoComponent'
 
 import store from './store'
 
@@ -18,7 +19,8 @@ render(
 	    <IndexRedirect to="/greeting" />
 	    <Route path="/greeting" component={GreetingComponent} />
       <Route path="/time" component={TimeComponent} />
-	    <Route path="/prompts" component={PromptComponent} />
+      <Route path="/prompts" component={PromptComponent} />
+	    <Route path="/inspo" component={InspoComponent} />
     </Route>
     </Router>
   </Provider>,
