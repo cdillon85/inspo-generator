@@ -1,7 +1,6 @@
 import React from 'react'
 import {connect} from 'react-redux'
 
-import GreetingComponent from './GreetingComponent'
 
 const mapStateToProps = (state) => {
 	return {
@@ -25,11 +24,8 @@ class AppContainer extends React.Component {
 
 
 render () {
-	return(
-		<div>
-		<GreetingComponent />
-		</div>
-
+	return (
+		<div>{this.props.children}</div>
 		)
 	}
 }

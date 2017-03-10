@@ -29,14 +29,14 @@
 .single-btn{
 	background-color: #fff;
 	opacity: .7;
-	font-family: 'Pacifico', cursive;
-	padding-top: 10px;
+	font-family: 'Libre Baskerville', serif;
+	padding-top: 30px;
 	text-align: center;
-	font-size: 40px;
+	font-size: 35px;
 	z-index: 1;
 	border-radius: 10px;
-	color:#1325EB;
-	width:500px;
+	color:#5b6575;
+	width:550px;
 	height:100px;
 	margin-left: 35%;
 
@@ -49,7 +49,8 @@
 
 .single-btn:hover{
 	border:#1325EB solid 2px;
-	padding-top:5px;
-	font-size: 55px;
+	padding-top:15px;
+	font-size: 50px;
 	height:110px;
+	width:550px;
 }
