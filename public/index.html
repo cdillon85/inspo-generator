@@ -1,8 +1,33 @@
 <!doctype html>
-<html>
+<html id="page-body">
   <head>
-  <link href="/styles.scss" rel="stylesheet" />
+  <link href="/styles.css" rel="stylesheet" />
   <title>Inspo-Generator</title>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+  	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+		let num = Math.random() * 10
+		console.log(num)
+		num = Math.round(num)
+		console.log(num)
+		let image = '/images/' + num + '.jpeg'
+		console.log(image)
+		// let time = new Date().getHours()
+		// let image = 
+		// if (time<10){
+		// 	image = 
+		// } else if (time > 10 && time < 17){
+		// 	image = '/images/sunset.jpeg'
+		// } else if (time > 17 && time < 20){
+ 	// 		image =
+		// }
+		$('#page-body').css({
+			'background': 'url(' + image + ') center center no-repeat',
+			'background-size': 'cover',
+			'min-height': '100%'})
+	})
+</script>
   </head>
   <body>
     <div id=app></div>
