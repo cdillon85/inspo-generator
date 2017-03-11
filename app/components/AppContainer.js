@@ -1,6 +1,7 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import {browserHistory} from 'react-router'
+import {updateInspoTime} from '../reducers/time'
 
 
 const mapStateToProps = (state) => {
@@ -11,7 +12,9 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
 	return {
-
+		updateInspoTimeSelected(time){
+			dispatch(updateInspoTime(time))
+		}
 	}
 }
 
