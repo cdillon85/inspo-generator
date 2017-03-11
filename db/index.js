@@ -1,6 +1,5 @@
 'use strict'; // eslint-disable-line semi
 const app = require('APP')
-const debugSQL = require('debug')('sql') // DEBUG=sql
 const debugDB = require('debug')(`${app.name}:db`) // DEBUG=your_app_name:db
 const chalk = require('chalk')
 const Sequelize = require('sequelize')
@@ -14,7 +13,6 @@ debugDB(chalk.yellow(`Opening database connection to ${url}`))
 
 // create the database instance
 const db = module.exports = new Sequelize(url, {
-  logging: debugSQL, // export DEBUG=sql in the environment to get SQL queries
   define: {
     underscored: true,       // use snake_case rather than camelCase column names
     freezeTableName: true,   // don't change table names from the one specified
