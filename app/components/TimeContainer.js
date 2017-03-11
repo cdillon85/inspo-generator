@@ -2,13 +2,9 @@ import React from 'react'
 import {connect} from 'react-redux'
 import {browserHistory} from 'react-router'
 import {updateInspoTime} from '../reducers/time'
+import TimeComponent from './TimeComponent'
 
 
-const mapStateToProps = (state) => {
-	return {
-
-	}
-}
 
 const mapDispatchToProps = (dispatch) => {
 	return {
@@ -18,7 +14,7 @@ const mapDispatchToProps = (dispatch) => {
 	}
 }
 
-class AppContainer extends React.Component {
+class TimeContainer extends React.Component {
 	constructor(props){
 		super (props)
 		this.state = {
@@ -34,14 +30,11 @@ handleClick (value){
 render () {
 	return (
 		<div>
-		{React.cloneElement(this.props.children, {
-			handleClick: this.handleClick,
-			updateInspoTime: this.props.updateInspoTimeSelected
-		})}
+		<TimeComponent handleClick={this.handleClick} updateInspoTime={this.props.updateInspoTimeSelected} />
 		</div>
 		)
 	}
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(AppContainer)
+export default connect(null, mapDispatchToProps)(TimeContainer)
 
