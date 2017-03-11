@@ -1,21 +1,25 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import {browserHistory} from 'react-router'
+import PromptComponent from './PromptComponent'
+import {selectPrompt} from '../reducers/prompts'
 
 
 const mapStateToProps = (state) => {
 	return {
-
+		prompts: state.prompts.prompts
 	}
 }
 
 const mapDispatchToProps = (dispatch) => {
 	return {
-
+		selectPromptById(id){
+			dispatch(selectPrompt(id))
+		}
 	}
 }
 
-class AppContainer extends React.Component {
+class PromptContainer extends React.Component {
 	constructor(props){
 		super (props)
 		this.state = {
@@ -27,15 +31,14 @@ handleClick (value){
 	browserHistory.push(value)
 }
 
-
 render () {
 	return (
-		<div>{React.cloneElement(this.props.children, {
-			handleClick: this.handleClick
-		})}</div>
+		<div>
+		<PromptComponent handleClick={this.handleClick} {...this.props} />
+		</div>
 		)
 	}
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(AppContainer)
+export default connect(mapStateToProps, mapDispatchToProps)(PromptContainer)
 

@@ -31,7 +31,7 @@ prettyError.skipNodeFiles()
 prettyError.skipPackage('express')
 
 module.exports = app
-  
+
   // Body parsing middleware
   .use(bodyParser.urlencoded({ extended: true }))
   .use(bodyParser.json())

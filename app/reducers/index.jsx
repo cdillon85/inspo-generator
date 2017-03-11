@@ -1,7 +1,8 @@
 import { combineReducers } from 'redux'
 
 const rootReducer = combineReducers({
-  // auth: require('./auth').default,
+  time: require('./time').default,
+  prompts: require('./prompts').default
 })
 
 export default rootReducer
