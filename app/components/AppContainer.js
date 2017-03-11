@@ -33,9 +33,12 @@ handleClick (value){
 
 render () {
 	return (
-		<div>{React.cloneElement(this.props.children, {
-			handleClick: this.handleClick
-		})}</div>
+		<div>
+		{React.cloneElement(this.props.children, {
+			handleClick: this.handleClick,
+			updateInspoTime: this.props.updateInspoTimeSelected
+		})}
+		</div>
 		)
 	}
 }

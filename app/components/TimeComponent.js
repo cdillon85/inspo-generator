@@ -3,6 +3,7 @@ import React from 'react'
 const TimeComponent = (props) => {
 const handleClick = props.handleClick
 const updateInspoTime = props.updateInspoTime
+console.log("props", props)
 	return (
 	<div>
 		<div className="headline-container">
