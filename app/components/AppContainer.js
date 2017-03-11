@@ -1,5 +1,6 @@
 import React from 'react'
 import {connect} from 'react-redux'
+import {browserHistory} from 'react-router'
 
 
 const mapStateToProps = (state) => {
@@ -18,14 +19,20 @@ class AppContainer extends React.Component {
 	constructor(props){
 		super (props)
 		this.state = {
-
 		}
+		this.handleClick = this.handleClick.bind(this)
 	}
+
+handleClick (value){
+	browserHistory.push(value)
+}
 
 
 render () {
 	return (
-		<div>{this.props.children}</div>
+		<div>{React.cloneElement(this.props.children, {
+			handleClick: this.handleClick
+		})}</div>
 		)
 	}
 }

@@ -5,6 +5,14 @@
 	background-color: none;
 }
 
+a {
+	text-decoration: none;
+}
+
+a:visited{
+	color:black;
+}
+
 .headline-container{
 	margin-top: 100px;
 	background: none;
