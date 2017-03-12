@@ -12,8 +12,8 @@ const PromptComponent = (props) => {
 			transitionName="headline-animate"
 			transitionAppear={true}
 			transitionAppearTimeout={2000}
-			transitionEnter={false}
-     		transitionLeave={false}>
+			transitionEnterTimeout={2000}
+			transitionLeaveTimeout={2000}>
 			<h1 key={1} className="headline">How do you feel today?</h1>
 		</ReactCSSTransitionGroup>
 		</div>
@@ -22,9 +22,9 @@ const PromptComponent = (props) => {
 			<ReactCSSTransitionGroup
 				transitionName="btn-fade"
 				transitionAppear={true}
-				transitionAppearTimeout={5000}
-				transitionEnter={false}
- 				transitionLeave={false}>
+				transitionAppearTimeout={2000}
+				transitionEnterTimeout={2000}
+				transitionLeaveTimeout={2000}>
 				<div className="prompt" key={1} onClick={() =>
 					{ selectPrompt(1); handleClick('/inspo')}}>My self image could use a boost.
 				</div>

@@ -4,6 +4,7 @@
   <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
   <link href="/styles.css" rel="stylesheet" />
+  <link rel="stylesheet" href="dist/selection-sharer.css" />
   <title>Inspo-Generator</title>
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
   	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
@@ -22,6 +23,8 @@
   </head>
   <body>
     <div id=app></div>
-    <script async defer src=/bundle.js></script>    
+    <script async defer src=/bundle.js></script> 
+    <script src="dist/selection-sharer.js"></script>
+	<script>$('div').selectionSharer()</script>  
   </body>
 </html> 

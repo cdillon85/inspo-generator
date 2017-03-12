@@ -18,7 +18,7 @@ const updateInspoTime = props.updateInspoTime
 		<ReactCSSTransitionGroup
 				transitionName="btn-fade"
 				transitionAppear={true}
-				transitionAppearTimeout={5000}
+				transitionAppearTimeout={2000}
 				transitionEnterTimeout={2000}
 				transitionLeaveTimeout={2000}>
 			<div key={2}className="single-btn-container">
