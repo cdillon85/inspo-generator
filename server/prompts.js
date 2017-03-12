@@ -7,14 +7,30 @@ const express = require('express')
 const router = new express.Router()
 module.exports = router
 
-router.get('/:id/:time', function (req, res, next){
+router.get('/more/:id', function (req, res, next){
+	let time = 6
+	console.log(req.params.id)
 	Inspo.findAll({
 		where: {
 			prompt_id: req.params.id,
-			Time: req.params.time
+			Time: time
 		}
 	})
 	.then(inspos => res.send(inspos))
 	.catch(next)
 })
+
+router.get('/less/:id', function (req, res, next){
+	let time = 4
+	console.log(req.params.id)
+	Inspo.findAll({
+		where: {
+			prompt_id: req.params.id,
+			Time: time
+		}
+	})
+	.then(inspos => res.send(inspos))
+	.catch(next)
+})
+
 

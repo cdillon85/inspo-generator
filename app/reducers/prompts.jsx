@@ -1,4 +1,5 @@
 import axios from 'axios'
+import {browserHistory} from 'react-router'
 
 //constants
 const PROMPT_TYPE = 'PROMPT_TYPE'
@@ -45,16 +46,26 @@ export const selectPrompt = (id) =>
 	(dispatch, getState) => {
 		dispatch(promptType(id))
 		let time = getState().time
-		if (id === 12){
-			id = Math.floor(Math.random() * 11)
-		}
-		axios.get(`/api/prompts/${id}/${time}`)
+		if (time === 4) {
+		axios.get(`/api/prompts/less/${id}`)
 		.then(res => res.data)
 		.then(inspos => {
 			let randomIndex = Math.ceil(Math.random() * inspos.length)
 			dispatch(currentPrompt(inspos[randomIndex]))
+			browserHistory.push('/inspo')
 		})
 		.catch(error => console.error('Error fetching inspo from database', error))
+		} else if (time === 6) {
+		axios.get(`/api/prompts/more/${id}`)
+		.then(res => res.data)
+		.then(inspos => {
+			let randomIndex = Math.ceil(Math.random() * inspos.length)
+			dispatch(currentPrompt(inspos[randomIndex]))
+			browserHistory.push('/inspo')
+
+		})
+		.catch(error => console.error('Error fetching inspo from database', error))
+		}
 	}
 
 export default reducer
