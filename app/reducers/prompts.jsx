@@ -43,13 +43,15 @@ const reducer = (state = initialState, action) => {
 
 export const selectPrompt = (id) =>
 	(dispatch, getState) => {
-		console.log(id)
 		dispatch(promptType(id))
 		let time = getState().time
+		if (id === 12){
+			id = Math.floor(Math.random() * 11)
+		}
 		axios.get(`/api/prompts/${id}/${time}`)
 		.then(res => res.data)
 		.then(inspos => {
-			let randomIndex = Math.floor(Math.random() * inspos.length)
+			let randomIndex = Math.ceil(Math.random() * inspos.length)
 			dispatch(currentPrompt(inspos[randomIndex]))
 		})
 		.catch(error => console.error('Error fetching inspo from database', error))

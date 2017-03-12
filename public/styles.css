@@ -56,7 +56,7 @@ a:visited{
 
 .btn-fade-appear.btn-fade-appear-active {
 	opacity: 1;
-  	transition: opacity 4000ms ease-in;
+  	transition: opacity 2000ms ease-in;
 
 }
 
@@ -280,6 +280,50 @@ a:visited{
 	color: #538ce8;
 	height:50px;
 	width:300px;
+}
+
+.pop-up{
+	background-color: #fff;
+	font-family: 'Roboto', sans-serif;
+	padding-top: 20px;
+	margin-top: 10px;
+	margin-bottom: 50px;
+	text-align: center;
+	font-size: 20px;
+	z-index: 1;
+	color:black;
+	width:590px;
+	height:50px;
+	margin-left: 34%;
+	border: #457cd3 solid 1px;
+
+}
+
+
+.pop-up-btn-container{
+	background-color: none;
+	text-align: center:;
+}
+
+
+.pop-up-btn{
+	background-color: #fff;
+	padding-top:3px;
+	font-family: 'Roboto', sans-serif;
+	text-align: center;
+	font-size: 20px;
+	z-index: 1;
+	border:white;
+	width:100px;
+	height:30px;
+	margin-top:10px;
+	margin-left:40%;
+
+}
+
+.pop-up-btn:hover{
+	background-color:#457cd3;
+
 }
 
 
