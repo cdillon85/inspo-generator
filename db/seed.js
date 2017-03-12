@@ -32,7 +32,7 @@ const seedInspo = () => db.Promise.map([
   {Time: 4, Text: 'When I stand before God at the end of my life, I would hope that I would not have a single bit of talent left and could say, I used everything you gave me.', Author: 'Erma Bombeck', URL: 'https://en.wikipedia.org/wiki/Erma_Bombeck', prompt_id: 3},
   {Time: 4, Text: 'Because one believes in oneself, one doesn\'t try to convince others. Because one is content with oneself, one doesn\'t need others\' approval. Because one accepts oneself, the whole world accepts him or her.', Author: 'Lao-Tzu', URL: 'https://en.wikipedia.org/wiki/Laozi', prompt_id: 3},
   //'I am completely stressed out.'
-  {Time: 4, Text: 'Stress is caused by being "here" but wanting to be "there".', Author: 'Eckhart Tolle', URL: 'https://en.wikipedia.org/wiki/Eckhart_Tolle', prompt_id: 4},
+  {Time: 4, Text: 'Stress is caused by being here but wanting to be there.', Author: 'Eckhart Tolle', URL: 'https://en.wikipedia.org/wiki/Eckhart_Tolle', prompt_id: 4},
   {Time: 4, Text: 'When we long for life without difficulties, remind us that oaks grow strong in contrary winds and diamonds are made under pressure.', Author: 'Peter Marshall', URL: 'https://en.wikipedia.org/wiki/Peter_Marshall_(preacher)', prompt_id: 4},
   //'I am feeling unmotivated.'
   {Time: 4, Text: 'Don\'t ask yourself what the world needs, ask yourself what makes you come alive. And then go and do that. Because what the world needs is people who have come alive.', Author: 'Howard Washington Thurman', URL: 'https://en.wikipedia.org/wiki/Howard_Thurman', prompt_id: 5},
@@ -40,7 +40,7 @@ const seedInspo = () => db.Promise.map([
   {Time: 4, Text: 'It does not matter how slowly you go, as long as you do not stop.', Author: 'Confucius', URL: 'https://en.wikipedia.org/wiki/Confucius', prompt_id: 5},
   //'My life is great, no complaints here!'
   {Time: 4, Text: 'Happiness is not something you postpone for the future, it is something you design for the present.', Author: 'Jim Rohn', URL: 'https://en.wikipedia.org/wiki/Jim_Rohn', prompt_id: 6},
-  {Time: 4, Text: 'The best and ost beautiful things in the world cannot be seen or even touched - the must be felt with the heart.', Author: 'Helen Keller', URL: 'https://en.wikipedia.org/wiki/Helen_Keller', prompt_id: 6},
+  {Time: 4, Text: 'The best and most beautiful things in the world cannot be seen or even touched - they must be felt with the heart.', Author: 'Helen Keller', URL: 'https://en.wikipedia.org/wiki/Helen_Keller', prompt_id: 6},
   {Time: 4, Text: 'As we express our gratitude, we must never forget that the highest appreciation is not to utter words but to live by them.', Author: 'John F. Kennedy', URL: 'https://en.wikipedia.org/wiki/John_F._Kennedy', prompt_id: 6},
   {Time: 4, Text: 'Feeling gratitude and not expressing it is like wrapping a present and not giving it.', Author: 'William Arthur Ward', URL: 'https://en.wikipedia.org/wiki/William_Arthur_Ward', prompt_id: 6},
   //'The state of the world depresses me.'

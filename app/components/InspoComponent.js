@@ -1,6 +1,7 @@
 import React from 'react'
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
 import PopUpComponent from './PopUpComponent'
+import {promptType, currentPrompt} from './reducers/prompts'
 
 const InspoComponent = (props) => {
 	const handleClick = props.handleClick
@@ -28,7 +29,8 @@ const InspoComponent = (props) => {
 				transitionEnterTimeout={2000}
 				transitionLeaveTimeout={2000}>
 			<div className="inspo-container">
-			<div className="inspo-btn" onClick={() => handleClick('/time')}>Start Here</div>
+			<div className="inspo-btn" onClick={() => {promptType(null);
+				currentPrompt({}); handleClick('/time')}}>Start Here</div>
 			</div>
 			</ReactCSSTransitionGroup>
 			</div>
@@ -69,7 +71,8 @@ const InspoComponent = (props) => {
 				transitionEnterTimeout={2000}
 				transitionLeaveTimeout={2000}>
 			<div className="inspo-btn"><a href={inspo.URL}>Want to learn more?</a></div>
-			<div className="inspo-btn" onClick={() => handleClick('/')}>Start Over</div>
+			<div className="inspo-btn" onClick={() => {promptType(null);
+				currentPrompt({}); handleClick('/')}} >Start Over</div>
 			</ReactCSSTransitionGroup>
 			</div>
 			</div>
@@ -110,7 +113,8 @@ const InspoComponent = (props) => {
 				transitionEnterTimeout={2000}
 				transitionLeaveTimeout={2000}>
 			<div className="inspo-btn"><a href={inspo.URL}>Want to read more?</a></div>
-			<div className="inspo-btn" onClick={() => handleClick('/')}>Start Over</div>
+			<div className="inspo-btn" onClick={() => {promptType(null);
+				currentPrompt({}); handleClick('/')}} >Start Over</div>
 			</ReactCSSTransitionGroup>
 			</div>
 			</div>

@@ -4,8 +4,6 @@ import rootReducer from './reducers'
 import createLogger from 'redux-logger'
 import thunkMiddleware from 'redux-thunk'
 
-import {getAllPrompts} from './reducers/prompts'
-
 const store = createStore(
   rootReducer,
   composeWithDevTools(
@@ -17,4 +15,6 @@ const store = createStore(
 )
 
 export default store
+
+
 

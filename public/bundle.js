@@ -62,6 +62,17 @@
 /******/ 	// __webpack_public_path__
 /******/ 	__webpack_require__.p = "";
 /******/
+/******/ 	// webpack-livereload-plugin
+/******/ 	(function() {
+/******/ 	  if (typeof window === "undefined") { return };
+/******/ 	  var id = "webpack-livereload-plugin-script";
+/******/ 	  if (document.getElementById(id)) { return; }
+/******/ 	  var el = document.createElement("script");
+/******/ 	  el.id = id;
+/******/ 	  el.async = true;
+/******/ 	  el.src = "http://localhost:35729/livereload.js";
+/******/ 	  document.getElementsByTagName("head")[0].appendChild(el);
+/******/ 	}());
 /******/ 	// Load entry module and return exports
 /******/ 	return __webpack_require__(__webpack_require__.s = 330);
 /******/ })
@@ -15787,8 +15798,6 @@ var _reduxThunk = __webpack_require__(321);
 
 var _reduxThunk2 = _interopRequireDefault(_reduxThunk);
 
-var _prompts = __webpack_require__(49);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var store = (0, _redux.createStore)(_reducers2.default, (0, _reduxDevtoolsExtension.composeWithDevTools)((0, _redux.applyMiddleware)((0, _reduxLogger2.default)({ collapsed: true }), _reduxThunk2.default)));
@@ -16717,281 +16726,13 @@ exports.default = GreetingComponent;
 
 /***/ }),
 /* 168 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
 "use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-	value: true
-});
-
-var _react = __webpack_require__(5);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _reactAddonsCssTransitionGroup = __webpack_require__(41);
-
-var _reactAddonsCssTransitionGroup2 = _interopRequireDefault(_reactAddonsCssTransitionGroup);
-
-var _PopUpComponent = __webpack_require__(169);
-
-var _PopUpComponent2 = _interopRequireDefault(_PopUpComponent);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var InspoComponent = function InspoComponent(props) {
-	var handleClick = props.handleClick;
-	var inspo = props.currentInspo;
-	var show = props.show;
-	var onClick = props.onClick;
-
-	if (inspo.id === undefined) {
-		return _react2.default.createElement(
-			'div',
-			null,
-			_react2.default.createElement(
-				'div',
-				{ className: 'headline-container' },
-				_react2.default.createElement(
-					_reactAddonsCssTransitionGroup2.default,
-					{
-						transitionName: 'headline-animate',
-						transitionAppear: true,
-						transitionAppearTimeout: 2000,
-						transitionEnter: false,
-						transitionLeave: false },
-					_react2.default.createElement(
-						'h1',
-						{ className: 'headline' },
-						'Let\'s get inspired!'
-					)
-				)
-			),
-			_react2.default.createElement(
-				_reactAddonsCssTransitionGroup2.default,
-				{
-					transitionName: 'btn-animate',
-					transitionAppear: true,
-					transitionAppearTimeout: 2000,
-					transitionEnterTimeout: 2000,
-					transitionLeaveTimeout: 2000 },
-				_react2.default.createElement(
-					'div',
-					{ className: 'inspo-container' },
-					_react2.default.createElement(
-						'div',
-						{ className: 'inspo-btn', onClick: function onClick() {
-								return handleClick('/time');
-							} },
-						'Start Here'
-					)
-				)
-			)
-		);
-	} else if (inspo.Time === 4) {
-		return _react2.default.createElement(
-			'div',
-			null,
-			_react2.default.createElement(
-				'div',
-				{ className: 'headline-container' },
-				_react2.default.createElement(
-					_reactAddonsCssTransitionGroup2.default,
-					{
-						transitionName: 'headline-animate',
-						transitionAppear: true,
-						transitionAppearTimeout: 2000,
-						transitionEnter: 2000,
-						transitionLeave: 2000 },
-					_react2.default.createElement(
-						'h1',
-						{ className: 'headline' },
-						'How about this?'
-					)
-				)
-			),
-			show === true ? _react2.default.createElement(_PopUpComponent2.default, { onClick: onClick }) : null,
-			_react2.default.createElement(
-				'div',
-				{ className: 'inspo-container' },
-				_react2.default.createElement(
-					_reactAddonsCssTransitionGroup2.default,
-					{
-						transitionName: 'headline-animate',
-						transitionAppear: true,
-						transitionAppearTimeout: 2000,
-						transitionEnter: 2000,
-						transitionLeave: 2000 },
-					_react2.default.createElement(
-						'div',
-						{ className: 'inspo-quote' },
-						_react2.default.createElement(
-							'div',
-							{ className: 'inspo-quote' },
-							'"',
-							inspo.Text,
-							'"'
-						),
-						_react2.default.createElement(
-							'div',
-							{ className: 'inspo-quote' },
-							'~',
-							inspo.Author
-						)
-					)
-				),
-				_react2.default.createElement(
-					_reactAddonsCssTransitionGroup2.default,
-					{
-						transitionName: 'btn-animate',
-						transitionAppear: true,
-						transitionAppearTimeout: 2000,
-						transitionEnterTimeout: 2000,
-						transitionLeaveTimeout: 2000 },
-					_react2.default.createElement(
-						'div',
-						{ className: 'inspo-btn' },
-						_react2.default.createElement(
-							'a',
-							{ href: inspo.URL },
-							'Want to learn more?'
-						)
-					),
-					_react2.default.createElement(
-						'div',
-						{ className: 'inspo-btn', onClick: function onClick() {
-								return handleClick('/');
-							} },
-						'Start Over'
-					)
-				)
-			)
-		);
-	} else {
-		return _react2.default.createElement(
-			'div',
-			null,
-			_react2.default.createElement(
-				'div',
-				{ className: 'headline-container' },
-				_react2.default.createElement(
-					_reactAddonsCssTransitionGroup2.default,
-					{
-						transitionName: 'headline-animate',
-						transitionAppear: true,
-						transitionAppearTimeout: 2000,
-						transitionEnterTimeout: 2000,
-						transitionLeaveTimeout: 2000 },
-					_react2.default.createElement(
-						'h1',
-						{ className: 'headline' },
-						'How about this?'
-					)
-				)
-			),
-			show === true ? _react2.default.createElement(_PopUpComponent2.default, { onClick: onClick }) : null,
-			_react2.default.createElement(
-				'div',
-				{ className: 'inspo-container' },
-				_react2.default.createElement(
-					_reactAddonsCssTransitionGroup2.default,
-					{
-						transitionName: 'headline-animate',
-						transitionAppear: true,
-						transitionAppearTimeout: 2000,
-						transitionEnterTimeout: 2000,
-						transitionLeaveTimeout: 2000 },
-					_react2.default.createElement(
-						'div',
-						{ className: 'inspo-blurb' },
-						_react2.default.createElement(
-							'div',
-							null,
-							'"',
-							inspo.Text,
-							'"'
-						),
-						_react2.default.createElement(
-							'div',
-							{ className: 'inspo-author-blurb' },
-							'~',
-							inspo.Author
-						)
-					)
-				),
-				_react2.default.createElement(
-					_reactAddonsCssTransitionGroup2.default,
-					{
-						transitionName: 'btn-animate',
-						transitionAppear: true,
-						transitionAppearTimeout: 2000,
-						transitionEnterTimeout: 2000,
-						transitionLeaveTimeout: 2000 },
-					_react2.default.createElement(
-						'div',
-						{ className: 'inspo-btn' },
-						_react2.default.createElement(
-							'a',
-							{ href: inspo.URL },
-							'Want to read more?'
-						)
-					),
-					_react2.default.createElement(
-						'div',
-						{ className: 'inspo-btn', onClick: function onClick() {
-								return handleClick('/');
-							} },
-						'Start Over'
-					)
-				)
-			)
-		);
-	}
-};
-
-exports.default = InspoComponent;
+throw new Error("Module build failed: Error: ENOENT: no such file or directory, open '/Users/Christine/Desktop/Fullstack/1701/inspo_generator/node_modules/.cache/eslint-loader/data.json'\n    at Error (native)\n    at Object.fs.openSync (fs.js:640:18)\n    at Object.fs.writeFileSync (fs.js:1333:33)\n    at lint (/Users/Christine/Desktop/Fullstack/1701/inspo_generator/node_modules/eslint-loader/index.js:68:10)\n    at Object.module.exports (/Users/Christine/Desktop/Fullstack/1701/inspo_generator/node_modules/eslint-loader/index.js:197:3)");
 
 /***/ }),
-/* 169 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-	value: true
-});
-
-var _react = __webpack_require__(5);
-
-var _react2 = _interopRequireDefault(_react);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var PopUpComponent = function PopUpComponent(props) {
-	var onClickHandler = props.onClick;
-	return _react2.default.createElement(
-		"div",
-		{ className: "pop-up" },
-		"Did you know that you can highlight text and share it with friends? Try it out!",
-		_react2.default.createElement(
-			"div",
-			{ className: "pop-up-btn-container" },
-			_react2.default.createElement(
-				"div",
-				{ className: "pop-up-btn", onClick: function onClick() {
-						return onClickHandler();
-					} },
-				"Got It!"
-			)
-		)
-	);
-};
-
-exports.default = PopUpComponent;
-
-/***/ }),
+/* 169 */,
 /* 170 */
 /***/ (function(module, exports, __webpack_require__) {
 
