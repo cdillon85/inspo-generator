@@ -10,18 +10,18 @@ const handleClick = props.handleClick
 			transitionName="headline-animate"
 			transitionAppear={true}
 			transitionAppearTimeout={2000}
-			transitionEnterTimeout={2000}
-			transitionLeaveTimeout={2000}>
+			transitionEnterTimeout={false}
+			transitionLeaveTimeout={false}>
 			<h1 key={1} className="headline">Need Some Inspiration?</h1>
 			</ReactCSSTransitionGroup>
 
 			<div className="single-btn-container">
 			<ReactCSSTransitionGroup
-			transitionName="btn-animate"
+			transitionName="btn-fade-animate"
 			transitionAppear={true}
-			transitionAppearTimeout={5000}
-			transitionEnterTimeout={2000}
-			transitionLeaveTimeout={2000}>
+			transitionAppearTimeout={4000}
+			transitionEnterTimeout={false}
+			transitionLeaveTimeout={false}>
 			<div key={2} className="greeting-single-btn" onClick={() => handleClick('/time')} >Yes please!</div>
 			</ReactCSSTransitionGroup>
 			</div>

@@ -20,7 +20,7 @@ const PromptComponent = (props) => {
 
     		<div className="prompt-container">
 			<ReactCSSTransitionGroup
-				transitionName="btn-animate"
+				transitionName="btn-fade"
 				transitionAppear={true}
 				transitionAppearTimeout={5000}
 				transitionEnter={false}
