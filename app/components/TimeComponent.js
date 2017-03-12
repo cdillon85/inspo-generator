@@ -16,7 +16,7 @@ const updateInspoTime = props.updateInspoTime
 			<h1 key={1}className="headline">How much time do you have?</h1>
 		</ReactCSSTransitionGroup>
 		<ReactCSSTransitionGroup
-				transitionName="btn-animate"
+				transitionName="btn-fade"
 				transitionAppear={true}
 				transitionAppearTimeout={5000}
 				transitionEnterTimeout={2000}
