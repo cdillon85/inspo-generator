@@ -13,6 +13,7 @@ a:visited{
 	color:black;
 }
 
+
 .headline-container{
 	margin-top: 100px;
 	background: none;
@@ -29,6 +30,43 @@ a:visited{
 	margin-bottom: 0px;
 	z-index: 1;
 }
+
+.headline-animate-appear {
+	transform: translateY(-100%);
+}
+
+.headline-animate-appear.headline-animate-appear-active {
+	animation: slide-in 2000ms ease-out forwards;
+  
+}
+
+@keyframes slide-in {
+	from {
+		transform: translateY(-100%);
+	}
+	to{
+		transform: translateY(0%);
+	}
+}
+
+.btn-animate-appear {
+	transform: translateY(+100%);
+}
+
+.btn-animate-appear.btn-animate-appear-active {
+
+	animation: slide 2000ms ease-out forwards;
+}
+
+@keyframes slide {
+	from {
+		transform: translateY(+100%);
+	}
+	to{
+		transform: translateY(0%);
+	}
+}
+
 
 .single-btn-container{
 	background-color: none;
@@ -48,7 +86,7 @@ a:visited{
 	width:300px;
 	height:75px;
 	margin-top: 100px;
-	margin-left: 35%;
+	margin-left: 40%;
 
 	 -webkit-transition: all 1s ease;
      -moz-transition: all 1s ease;
