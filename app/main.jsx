@@ -14,10 +14,10 @@ import store from './store'
 render(
   <Provider store={store}>
     <Router history={browserHistory}>
-    <Route path="/" component={GreetingContainer} />
-    <Route path="/time" component={TimeContainer} />
-    <Route path="/prompts" component={PromptContainer} />
-    <Route path="/inspo" component={InspoContainer} />
+	    <Route path="/" component={GreetingContainer} />
+	    <Route path="/time" component={TimeContainer} />
+	    <Route path="/prompts" component={PromptContainer} />
+	    <Route path="/inspo" component={InspoContainer} />
     </Router>
   </Provider>,
   document.getElementById('app')
