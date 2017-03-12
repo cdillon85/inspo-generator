@@ -7,7 +7,7 @@ const handleClick = props.handleClick
 		<div className="headline-container">
 			<h1 className="headline">Need Some Inspiration?</h1>
 			<div className="single-btn-container">
-			<div className="single-btn" onClick={() => handleClick('/time')} >Yes please!</div>
+			<div className="greeting-single-btn" onClick={() => handleClick('/time')} >Yes please!</div>
 			</div>
 		</div>
 	</div>
