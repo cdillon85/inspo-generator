@@ -52,7 +52,7 @@ const seedInspo = () => db.Promise.map([
   {Time: 4, Text: 'Anger is an acid that can do more harm to the vessel in which it is stored than to anything on which it is poured.', Author: 'Mark Twain', URL: 'https://en.wikipedia.org/wiki/Mark_Twain', prompt_id: 8},
   //'I am afraid to step outside my comfort zone.'
   {Time: 4, Text: 'We generate fears while we sit. We overcome them by action.', Author: 'Dr. Henry Link', URL: null, prompt_id: 9},
-  {Time: 4, Text: 'You lern more from failure than from success. Don\'t let it stop you. Failure builds character.', Author: 'Unknown', URL: null, prompt_id: 9},
+  {Time: 4, Text: 'You learn more from failure than from success. Don\'t let it stop you. Failure builds character.', Author: 'Unknown', URL: null, prompt_id: 9},
   //'Nothing ever goes right for me.'
   {Time: 4, Text: 'We must let go of the life we have planned, so as to accept the one that is waiting for us.', Author: 'Joseph Campbell', URL: 'https://en.wikipedia.org/wiki/Joseph_Campbell', prompt_id: 10},
   {Time: 4, Text: 'Happiness can be found, even in the darkest of times, if one only remembers to turn on the light.', Author: 'J.K. Rowling', URL: 'https://en.wikipedia.org/wiki/J._K._Rowling', prompt_id: 10},
