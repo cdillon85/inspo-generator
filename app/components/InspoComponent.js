@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
 import PopUpComponent from './PopUpComponent'
-import {promptType, currentPrompt} from './reducers/prompts'
+import {promptType, currentPrompt} from '../reducers/prompts'
 
 const InspoComponent = (props) => {
 	const handleClick = props.handleClick
