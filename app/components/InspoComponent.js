@@ -2,6 +2,7 @@ import React from 'react'
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
 import PopUpComponent from './PopUpComponent'
 
+
 const InspoComponent = (props) => {
 	const handleClick = props.handleClick
 	const inspo = props.currentInspo

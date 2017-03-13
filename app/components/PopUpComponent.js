@@ -1,4 +1,5 @@
 import React from 'react'
+
 const PopUpComponent = (props) => {
 const onClickHandler = props.onClick
 	return (
