@@ -50,7 +50,7 @@ export const selectPrompt = (id) =>
 		axios.get(`/api/prompts/less/${id}`)
 		.then(res => res.data)
 		.then(inspos => {
-			let randomIndex = Math.ceil(Math.random() * inspos.length)
+			let randomIndex = Math.floor(Math.random() * inspos.length)
 			dispatch(currentPrompt(inspos[randomIndex]))
 			browserHistory.push('/inspo')
 		})
@@ -59,7 +59,7 @@ export const selectPrompt = (id) =>
 		axios.get(`/api/prompts/more/${id}`)
 		.then(res => res.data)
 		.then(inspos => {
-			let randomIndex = Math.ceil(Math.random() * inspos.length)
+			let randomIndex = Math.floor(Math.random() * inspos.length)
 			dispatch(currentPrompt(inspos[randomIndex]))
 			browserHistory.push('/inspo')
 

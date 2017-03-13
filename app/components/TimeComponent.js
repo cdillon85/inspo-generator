@@ -11,16 +11,16 @@ const updateInspoTime = props.updateInspoTime
 				transitionName="headline-animate"
 				transitionAppear={true}
 				transitionAppearTimeout={2000}
-				transitionEnterTimeout={2000}
-				transitionLeaveTimeout={2000}>
+				transitionEnter={false}
+				transitionLeave={false}>
 			<h1 key={1}className="headline">How much time do you have?</h1>
 		</ReactCSSTransitionGroup>
 		<ReactCSSTransitionGroup
 				transitionName="btn-fade"
 				transitionAppear={true}
 				transitionAppearTimeout={2000}
-				transitionEnterTimeout={2000}
-				transitionLeaveTimeout={2000}>
+				transitionEnter={false}
+				transitionLeave={false}>
 			<div key={2}className="single-btn-container">
 				<div key={3} className="time-single-btn" onClick={() => { handleClick('/prompts'); updateInspoTime(4)} }>Less than 5 Minutes</div>
 			</div>

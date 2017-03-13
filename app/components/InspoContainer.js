@@ -2,11 +2,27 @@ import React from 'react'
 import {connect} from 'react-redux'
 import {browserHistory} from 'react-router'
 import InspoComponent from './InspoComponent'
+import {promptType, currentPrompt} from '../reducers/prompts'
+import {updateTime} from '../reducers/time'
 
 
 const mapStateToProps = (state) => {
 	return {
 		currentInspo: state.prompts.currentPrompt
+	}
+}
+
+const mapDispatchToProps = (dispatch) => {
+	return {
+		updatePromptType (){
+			dispatch(promptType(null))
+		},
+		updateCurrentPrompt (){
+			dispatch(currentPrompt({}))
+		},
+		updateTimeSelection (){
+			dispatch(updateTime(null))
+		}
 	}
 }
 
@@ -35,11 +51,18 @@ onClick (){
 render () {
 	return (
 		<div>
-		<InspoComponent handleClick={this.handleClick} show={this.state.show} onClick={this.onClick} {...this.props} />
+		<InspoComponent
+			updateCurrentPrompt={this.props.updateCurrentPrompt}
+			updateTimeSelection={this.props.updateTimeSelection}
+			updatePromptType={this.props.updatePromptType}
+			handleClick={this.handleClick}
+			show={this.state.show}
+			onClick={this.onClick}
+			{...this.props} />
 		</div>
 		)
 	}
 }
 
-export default connect(mapStateToProps, null)(InspoContainer)
+export default connect(mapStateToProps, mapDispatchToProps)(InspoContainer)
 

@@ -36,7 +36,7 @@ a:visited{
 }
 
 .headline-animate-appear.headline-animate-appear-active {
-	animation: slide-in 2000ms ease-out forwards;
+	animation: slide-in 1000ms ease-out forwards;
   
 }
 
@@ -56,7 +56,7 @@ a:visited{
 
 .btn-fade-appear.btn-fade-appear-active {
 	opacity: 1;
-  	transition: opacity 2000ms ease-in;
+  	transition: opacity 1000ms ease-in;
 
 }
 
@@ -65,7 +65,7 @@ a:visited{
 }
 
 .btn-animate-appear.btn-animate-appear-active {
-	animation: slide 2000ms ease-out forwards;
+	animation: slide 1000ms ease-out forwards;
 }
 
 @keyframes slide {
@@ -84,8 +84,8 @@ a:visited{
 
 .btn-fade-animate-appear.btn-fade-animate-appear-active {
 	opacity: 1;
-  	transition: opacity 4000ms ease-in;
-  	animation: slider 2000ms ease-out forwards;
+  	transition: opacity 1000ms ease-in;
+  	animation: slider 1000ms ease-out forwards;
 
 }
 
