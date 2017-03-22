@@ -17008,17 +17008,21 @@ var PopUpComponent = function PopUpComponent(props) {
 	var onClickHandler = props.onClick;
 	return _react2.default.createElement(
 		"div",
-		{ className: "pop-up" },
-		"Did you know that you can highlight text and share it with friends? Try it out!",
+		{ className: "pop-up-container" },
 		_react2.default.createElement(
 			"div",
-			{ className: "pop-up-btn-container" },
+			{ className: "pop-up" },
+			"Did you know that you can highlight text and share it with friends? Try it out!",
 			_react2.default.createElement(
 				"div",
-				{ className: "pop-up-btn", onClick: function onClick() {
-						return onClickHandler();
-					} },
-				"Got It!"
+				{ className: "pop-up-btn-container" },
+				_react2.default.createElement(
+					"div",
+					{ className: "pop-up-btn", onClick: function onClick() {
+							return onClickHandler();
+						} },
+					"Got It!"
+				)
 			)
 		)
 	);
