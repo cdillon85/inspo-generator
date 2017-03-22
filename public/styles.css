@@ -284,6 +284,11 @@ a:visited{
 	width:300px;
 }
 
+.pop-up-container{
+	width: 100%;
+	text-align: center;
+}
+
 .pop-up{
 	background-color: #fff;
 	font-family: 'Roboto', sans-serif;
@@ -295,8 +300,8 @@ a:visited{
 	z-index: 1;
 	color:black;
 	width:580px;
-	height:40 px;
-	margin-left: 34%;
+	height:40px;
+	margin-left: 30%;
 	border: #457cd3 solid 1px;
 	border-radius: 30px;
 }
